@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="56" fill="#07111e" stroke="#f5b915" stroke-width="5"/>
+  <path d="M60 18 L86 29 L60 40 L34 29 Z" fill="#ffffff"/>
+  <path d="M44 35 L44 43 C44 46 51 49 60 49 C69 49 76 46 76 43 L76 35 L60 42 Z" fill="#f5b915"/>
+  <line x1="82" y1="31" x2="82" y2="46" stroke="#f5b915" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="82" cy="48" r="2.8" fill="#f5b915"/>
+  <path d="M22 52 C36 46 50 49 58 62 L58 76 C48 67 34 65 20 70 Z" fill="#ffffff"/>
+  <path d="M98 52 C84 46 70 49 62 62 L62 76 C72 67 86 65 100 70 Z" fill="#ffffff"/>
+  <path d="M18 58 C34 52 48 56 58 70 L58 78 C46 68 32 66 16 72 Z" fill="#f5b915"/>
+  <path d="M102 58 C86 52 72 56 62 70 L62 78 C74 68 88 66 104 72 Z" fill="#f5b915"/>
+  <text x="60" y="99" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="16" fill="#f5b915">RDL</text>
+</svg>

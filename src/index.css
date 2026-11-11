@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #060f1d;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom typography classes */
+.font-display {
+  font-family: 'Outfit', 'Noto Sans Devanagari', sans-serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script-logo {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Subtle dot/grid backdrop */
+.bg-scholar-grid {
+  background-image:
+    radial-gradient(rgba(245, 185, 21, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px, 64px 64px, 64px 64px;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #f5b915 48%, #d97706 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass panel style */
+.glass-navy {
+  background: rgba(10, 22, 42, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(245, 185, 21, 0.18);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.75;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@keyframes tickerSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 2.6s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: tickerSlide 28s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Accessibility: respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float-slow,
+  .animate-pulse-ring,
+  .animate-ticker {
+    animation: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060f1d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f5b915;
+}
+
+/* Clean Official Admission Slip Print Styles */
+@media print {
+  header,
+  main,
+  footer {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #07111e !important;
+  }
+  .printable-slip {
+    background: #ffffff !important;
+    color: #07111e !important;
+    border-color: #07111e !important;
+    box-shadow: none !important;
+  }
+  .printable-slip * {
+    color: #07111e !important;
+  }
+}
